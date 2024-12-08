@@ -5,7 +5,14 @@ The project consists of implementing the U-net architecture from scratch as well
 We're gonna use the following dataset: [Airbus Ship Detection Challenge](https://www.kaggle.com/competitions/airbus-ship-detection/)
 
 
-## How to train on DTU HPC cluster
+# Poster
+
+![poster](poster.png)
+
+
+# Useful tips
+
+### How to train on DTU HPC cluster
 
 From the **root of the repo** run, e.g.
 
