@@ -1,8 +1,8 @@
 # Final project for Deep Learning (02456)
 
-The project consists of implementing the U-net architecture from scratch as well as the Yolov1. 
+Comparison and implementation (from scratch) of YOLOv1 and U-Net.
 
-We're gonna use the following dataset: [Airbus Ship Detection Challenge](https://www.kaggle.com/competitions/airbus-ship-detection/)
+Dataset: [Airbus Ship Detection Challenge](https://www.kaggle.com/competitions/airbus-ship-detection/)
 
 
 # Poster
@@ -12,7 +12,9 @@ We're gonna use the following dataset: [Airbus Ship Detection Challenge](https:/
 
 # Useful tips
 
-### How to train on DTU HPC cluster
+We're training on the DTU HPC LSF 10 Cluster. All used scripts are available under `jobscripts/`.
+
+### How to submit a job
 
 From the **root of the repo** run, e.g.
 
@@ -23,14 +25,13 @@ bsub < ./jobscripts/unet/jobscript_train.sh
 Then you can use `bstat` to check the job status.
 
 
-### See real-time output
+### How to see real-time output
 
 You can use `tail` to see the job log in real time, e.g.:
 
 ```bash
 tail gpu_23113941.out -f
 ```
-
 
 ### tqdm output interpretation
 
@@ -43,9 +44,7 @@ Epoch 3, lr 0.0001:  18%|█▊        | 7376/40432 [02:56<13:06, 42.02it/s, los
 - `42.02it/s`: This represents the processing speed, indicating that your model is processing 42.02 iterations (samples) per second.
 
 
-
-
-## Evaluate on interactive GPU
+### Evaluate on interactive GPU
 
 To just evaluate the model you can use the interactive nodes.
 
